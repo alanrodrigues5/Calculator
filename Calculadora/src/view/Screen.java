@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /** @author Alan Santos
- * @version 1.0
+ *  @version 1.0
  *  @description All i wanna to say is that its time for some Rock 'n Roll \../
  * 
 */
@@ -40,9 +40,7 @@ public class Screen {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
 	private void initialize() {
 		frmCalculadora = new JFrame();
 		frmCalculadora.setTitle("Calculadora");
