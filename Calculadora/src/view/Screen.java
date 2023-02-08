@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
@@ -87,6 +88,13 @@ public class Screen {
 		JButton btnErase = new JButton("<=");
 		btnErase.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if((!txtResult.getText().equalsIgnoreCase("0") && 
+					!(txtResult.getText().length() == 0) && 
+					!txtResult.getText().equalsIgnoreCase(""))) {
+						StringBuilder field = new StringBuilder(txtResult.getText());
+						field.deleteCharAt(field.length() -1);
+						txtResult.setText(field.toString());
+				}
 			}
 		});
 		btnErase.setBounds(307, 153, 89, 75);
